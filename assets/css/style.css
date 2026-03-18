@@ -1,0 +1,339 @@
+html {  
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-rows: minmax(500px, 650px) minmax(600px, 700px) minmax(600px, 700px) minmax(600px, 700px) minmax(600px, 700px);
+    /* align-items: start; */
+}
+
+.cor-titulo {
+    color: #197672;
+}
+
+.cor-texto-explicativo {
+    color: #808080;
+}
+
+.secao-clara {
+    background-color: white;
+    /* align-content: center; */
+}
+
+.secao-escura {
+    background-color: #E3F2E6;
+    /* align-content: center; */
+}
+
+.grid-bloco-principal {
+    display: grid;
+    justify-content: center;
+    grid-template:
+        "barraOpcoes" 90px
+        "conteudoDestaque" 2fr
+        / minmax(400px, 966px);
+}
+
+.barra-opcoes {
+    grid-area: barraOpcoes;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menus {
+    width: 525px;
+}
+.menus > ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    color: #197672;
+}
+.menus > ul a { 
+    text-decoration: none;
+    color: inherit;    
+    font-weight: bold;
+}
+.menu-logo {
+    width: 90px;
+}
+
+.conteudo-destaque {
+    grid-area: conteudoDestaque;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 40px 0px 40px;
+    margin-top: 30px;
+}
+
+.img-prato {
+    width: 450px;
+    height: 480px;
+}
+
+.img-assinatura {
+    width: 300px;
+}
+
+/* Blocos */
+.grid-bloco {
+    display: grid;
+    justify-content: center;
+    /* justify-items: center; */
+    grid-template:
+        "blocoTitulo" 1fr
+        "blocoConteudo" 2fr
+        / minmax(400px, 966px);
+ }
+
+ .bloco-titulo {
+    grid-area: blocoTitulo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.bloco-titulo > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.bloco-titulo > .subtitulo {
+    font-size: 1.6rem;
+    margin: 0px;
+}
+
+.bloco-conteudo {
+    display: flex;
+    grid-area: blocoConteudo;
+    align-items: center;
+    min-height: 410px;
+}
+.bloco-conteudo > p {
+    color: #808080;
+    height: fit-content;
+    text-align: justify;
+    font-size: 1.6rem;
+    margin: 0px 30px 0px 30px;    
+    max-width: 560px;
+}
+.bloco-conteudo > ul {
+    color: #808080;
+    height: fit-content;
+    font-size: 1.6rem;
+    margin: 0px 30px 0px 30px;
+    color: #A2D5AC;
+}
+.bloco-conteudo > img {
+    max-height: 25rem;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Secão Final */
+.secao-final {
+    display: grid;
+    background-color: #D2EAE9;
+    height: 100%;
+}
+
+.assunto-ultimo-bloco {
+    grid-area: assuntoUltimoBloco;
+    justify-self: center;
+    align-self: center;   
+}
+.assunto-ultimo-bloco > h2 {    
+    font-size: 2.5rem;
+    max-width: 590px;
+    justify-self: center;
+}
+.assunto-ultimo-bloco > p {    
+    font-size: 1.6rem;
+    max-width: 590px;
+    justify-self: center;
+}
+
+.contatos {
+    grid-area: contatos;
+    justify-self: center;
+    margin-top: 30px;
+}
+.contatos > p {
+    color: #82AA8A;
+    font-size: 1.8rem;
+    margin: 15px;
+}
+.contato {
+    display: flex;
+    align-items: center;
+}
+.contato img {
+    margin-right: 15px;
+}
+.contato a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;    
+}
+
+.main-footer {
+    background-color: #1F948F;    
+    height: 60px;
+    align-self: end;
+}
+
+.grid-ultimo-bloco {
+    display: grid;
+    justify-content: center;
+    grid-template:
+        "assuntoUltimoBloco" 1fr
+        "contatos" 1fr
+        / minmax(400px, 966px);
+ }
+
+/* Quando a tela for MAIOR que 1200px (Desktops Grandes) */
+@media screen and (max-width: 800px) {
+  .conteudo-destaque {
+    flex-direction: column;
+    padding-right: 30px;
+    padding-left: 0px;
+  }
+
+  .grid-bloco-principal {
+    display: grid;
+    justify-content: center;
+    grid-template:
+        "conteudoDestaque barraOpcoes" 1fr        
+        / minmax(400px, 966px) 200px; 
+    }
+
+    .barra-opcoes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: unset;
+    }
+
+    .menu-logo {
+        display: none;
+    }
+
+    .img-assinatura {
+        position: absolute;
+        bottom: 5%;
+        left: 26%;
+    }
+
+    .secao-clara {
+        position: relative;
+    }
+
+    .menus {
+        width: unset;
+    }
+    .menus > ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .menus > ul > li { 
+        margin-top: 45px;
+    }
+
+    .cortador {
+        /* width: 100%; */
+        height: 450px;
+        overflow: hidden;
+    }
+    .cortador img {
+        width: 100%;
+        height: 100%;       
+        object-fit: cover;
+        object-position: right; 
+    }
+
+    .bloco-conteudo > img {
+        max-height: 20rem;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+     .cortador {
+        width: 88%;
+        height: 450px;
+        overflow: hidden;
+    }
+
+    .img-assinatura {
+        left: 20%;
+    }
+
+    .conteudo-destaque {
+        align-items: flex-start;
+    }
+
+    .grid-bloco-principal {
+        display: grid;
+        justify-content: center;
+        grid-template: "conteudoDestaque barraOpcoes" 1fr / 60% 40%;
+    }
+
+    .bloco-conteudo {
+        flex-direction: column;
+    }
+
+    .bloco-conteudo > ul {
+        margin: 0px 0px 0px 5px;
+    }
+
+    .grid-bloco {
+        display: grid;
+        justify-content: center;
+        grid-template:
+            "blocoTitulo" 200px
+            "blocoConteudo" 2fr 
+            / 90%;
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-rows: 650px 1fr 750px repeat(2, 1fr);
+    }
+
+    .bloco-titulo {
+        margin-top: 0px;
+    }
+    .bloco-titulo > h2 {
+        font-size: 2.0rem;
+        margin-bottom: 10px;
+    }
+    .bloco-titulo > .subtitulo {
+        font-size: 1.4rem;
+    }    
+
+    .assunto-ultimo-bloco > h2 {
+        font-size: 2.0rem;
+    }
+    .contatos > p {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .img-assinatura {
+        left: 10%;
+    }
+
+    .assunto-ultimo-bloco > h2, 
+    .assunto-ultimo-bloco > p {
+        text-align: center;
+    }
+}
