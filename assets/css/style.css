@@ -1,4 +1,5 @@
-html {  
+html { 
+  font-size: 16px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -128,7 +129,7 @@ body {
     height: fit-content;
     font-size: 1.6rem;
     margin: 0px 30px 0px 30px;
-    color: #A2D5AC;
+    color: #4e534f;    
 }
 .bloco-conteudo > img {
     max-height: 25rem;
@@ -201,18 +202,27 @@ body {
 
 /* Quando a tela for MAIOR que 1200px (Desktops Grandes) */
 @media screen and (max-width: 800px) {
-  .conteudo-destaque {
-    flex-direction: column;
-    padding-right: 30px;
-    padding-left: 0px;
-  }
+    .conteudo-destaque {
+        flex-direction: column;
+        padding-right: 30px;
+        padding-left: 0px;
+    }
 
-  .grid-bloco-principal {
-    display: grid;
-    justify-content: center;
-    grid-template:
-        "conteudoDestaque barraOpcoes" 1fr        
-        / minmax(400px, 966px) 200px; 
+   .grid-bloco-principal {
+        display: grid;
+        justify-content: center;
+        grid-template:
+            "conteudoDestaque barraOpcoes" 1fr        
+            / minmax(400px, 966px) 200px; 
+    }
+
+    .grid-ultimo-bloco {
+        display: grid;
+        justify-content: center;
+        grid-template:
+            "assuntoUltimoBloco" 1fr
+            "contatos" 1fr
+            / minmax(400px, 780px);
     }
 
     .barra-opcoes {
@@ -262,11 +272,45 @@ body {
 
     .bloco-conteudo > img {
         max-height: 20rem;
+        margin-bottom: 30px;
     }    
 }
 
 @media screen and (max-width: 600px) {
-     .cortador {
+    html {
+        font-size: 15px;
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-rows: 650px 1fr 750px repeat(2, 1fr);
+    }
+
+    .grid-bloco-principal {
+        display: grid;
+        justify-content: center;
+        grid-template: "conteudoDestaque barraOpcoes" 1fr / 60% 40%;
+    }
+
+    .grid-bloco {
+        display: grid;
+        justify-content: center;
+        grid-template:
+            "blocoTitulo" 170px
+            "blocoConteudo" 2fr 
+            / 90%;
+    }
+
+    .grid-ultimo-bloco {
+        display: grid;
+        justify-content: center;
+        grid-template:
+            "assuntoUltimoBloco" 1fr
+            "contatos" 1fr
+            / minmax(350px, 525px);
+    }
+
+    .cortador {
         width: 88%;
         height: 450px;
         overflow: hidden;
@@ -280,32 +324,12 @@ body {
         align-items: flex-start;
     }
 
-    .grid-bloco-principal {
-        display: grid;
-        justify-content: center;
-        grid-template: "conteudoDestaque barraOpcoes" 1fr / 60% 40%;
-    }
-
     .bloco-conteudo {
         flex-direction: column;
     }
 
     .bloco-conteudo > ul {
         margin: 0px 0px 0px 5px;
-    }
-
-    .grid-bloco {
-        display: grid;
-        justify-content: center;
-        grid-template:
-            "blocoTitulo" 200px
-            "blocoConteudo" 2fr 
-            / 90%;
-    }
-
-    .main-grid {
-        display: grid;
-        grid-template-rows: 650px 1fr 750px repeat(2, 1fr);
     }
 
     .bloco-titulo {
@@ -328,6 +352,24 @@ body {
 }
 
 @media screen and (max-width: 430px) {
+    html {
+        font-size: 14px;
+    }
+
+    .main-grid {
+        display: grid;
+        grid-template-rows: 670px 1fr 750px repeat(2, 1fr);
+    }
+
+    .grid-ultimo-bloco {
+        display: grid;
+        justify-content: center;
+        grid-template:
+            "assuntoUltimoBloco" 1fr
+            "contatos" 1fr
+            / minmax(350px, 415px);
+    }
+
     .img-assinatura {
         left: 10%;
     }
