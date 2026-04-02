@@ -198,7 +198,24 @@ body {
         "assuntoUltimoBloco" 1fr
         "contatos" 1fr
         / minmax(400px, 966px);
- }
+}
+
+.whatsapp-cta {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+}
+
+.whatsapp-cta > img {
+    
+}
 
 /* Quando a tela for MAIOR que 1200px (Desktops Grandes) */
 @media screen and (max-width: 800px) {
@@ -271,9 +288,12 @@ body {
     }
 
     .bloco-conteudo > img {
-        max-height: 20rem;
+        max-height: 18rem;
         margin-bottom: 30px;
-    }    
+    }
+    .bloco-conteudo > p {
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -327,7 +347,12 @@ body {
     .bloco-conteudo {
         flex-direction: column;
     }
-
+    /* .bloco-conteudo > p {
+        font-size: 1.4rem;
+    }
+    .bloco-conteudo > img {
+        max-height: 18rem;
+    } */
     .bloco-conteudo > ul {
         margin: 0px 0px 0px 5px;
     }
