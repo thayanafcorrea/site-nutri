@@ -315,7 +315,7 @@ body {
 
     .main-grid {
         display: grid;
-        grid-template-rows: 650px 650px 1fr repeat(2, 650px);
+        grid-template-rows: 650px 650px 890px repeat(2, 650px);
     }
 
     .grid-bloco-principal {
@@ -396,7 +396,7 @@ body {
 
     /* .main-grid {
         display: grid;
-        grid-template-rows: repeat(2, 670px) 1fr repeat(2, 670px);
+        grid-template-rows: repeat(2, 670px) 890px repeat(2, 670px);
     } */
 
     .grid-ultimo-bloco {
