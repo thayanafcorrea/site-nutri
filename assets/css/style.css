@@ -91,10 +91,9 @@ body {
     grid-template:
         "blocoTitulo" 1fr
         "blocoConteudo" 2fr
-        / minmax(400px, 966px);
- }
-
- .bloco-titulo {
+        / minmax(400px, 1050px);
+}
+.bloco-titulo {
     grid-area: blocoTitulo;
     display: flex;
     flex-direction: column;
@@ -109,7 +108,6 @@ body {
     font-size: 1.6rem;
     margin: 0px;
 }
-
 .bloco-conteudo {
     display: flex;
     grid-area: blocoConteudo;
@@ -134,6 +132,20 @@ body {
 .bloco-conteudo > img {
     max-height: 25rem;
 }
+
+.bloco-avaliacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    min-width: 400px;
+ }
+
+.bloco-avaliacao > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+}
+
 
 .row-reverse {
     flex-direction: row-reverse;
@@ -197,7 +209,7 @@ body {
     grid-template:
         "assuntoUltimoBloco" 1fr
         "contatos" 1fr
-        / minmax(400px, 966px);
+        / minmax(400px, 1050px);
 }
 
 .whatsapp-cta {
@@ -230,7 +242,7 @@ body {
         justify-content: center;
         grid-template:
             "conteudoDestaque barraOpcoes" 1fr        
-            / minmax(400px, 966px) 200px; 
+            / minmax(400px, 1050px) 200px; 
     }
 
     .grid-ultimo-bloco {
@@ -296,14 +308,14 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
     html {
         font-size: 15px;
     }
 
     .main-grid {
         display: grid;
-        grid-template-rows: 650px 1fr 750px repeat(2, 1fr);
+        grid-template-rows: 650px 650px 1fr repeat(2, 650px);
     }
 
     .grid-bloco-principal {
@@ -360,8 +372,9 @@ body {
     .bloco-titulo {
         margin-top: 0px;
     }
-    .bloco-titulo > h2 {
-        font-size: 2.0rem;
+    .bloco-titulo > h2,
+    .bloco-avaliacao > h2 {
+        font-size: 1.7rem;
         margin-bottom: 10px;
     }
     .bloco-titulo > .subtitulo {
@@ -369,7 +382,7 @@ body {
     }    
 
     .assunto-ultimo-bloco > h2 {
-        font-size: 2.0rem;
+        font-size: 1.7rem;
     }
     .contatos > p {
         font-size: 1.3rem;
@@ -381,10 +394,10 @@ body {
         font-size: 14px;
     }
 
-    .main-grid {
+    /* .main-grid {
         display: grid;
-        grid-template-rows: 670px 1fr 750px repeat(2, 1fr);
-    }
+        grid-template-rows: repeat(2, 670px) 1fr repeat(2, 670px);
+    } */
 
     .grid-ultimo-bloco {
         display: grid;
@@ -392,7 +405,7 @@ body {
         grid-template:
             "assuntoUltimoBloco" 1fr
             "contatos" 1fr
-            / minmax(350px, 415px);
+            / minmax(350px, 370px);
     }
 
     .img-assinatura {
